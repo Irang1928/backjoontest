@@ -12,12 +12,13 @@ public class Backjoon2525 {
         int sum = b + c;
         int sum2 = sum / 60;
         int sum3 = sum / 60 * 60;
+        int sum4 = a + sum2;
         if (sum >= 60) {
-            if (a + sum2 >= 24) {
-                System.out.println((a + sum2 - ((a + sum2) / 24 * 24)) + " " + (sum - sum3) );
+            if (sum4 >= 24) {
+                System.out.print((sum4 - (sum4 / 24 * 24)) + " " + (sum - sum3));
             }
-            else if (a + sum2 < 24) {
-                System.out.print((a + sum2) + " " + (sum - sum3));
+            else if (sum4 < 24) {
+                System.out.print(sum4 + " " + (sum - sum3));
             }
         }
         else if (sum < 60){
